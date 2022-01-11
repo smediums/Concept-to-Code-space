@@ -1,0 +1,67 @@
+@import "../Tools.scss";
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 65px;
+  width: 100vw;
+  padding: 0.5rem 1rem;
+  position: fixed;
+
+  .logo {
+    justify-self: start;
+    height: 100%;
+  }
+
+  .toggler {
+    justify-self: end;
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -50%;
+    padding: 1.5rem 1rem;
+    border-radius: 14px 0 0 14px;
+    background: rgba(221, 221, 221, 0.714);
+    backdrop-filter: blur(4px);
+    height: 100vh;
+    width: 50vw;
+    transition: .2s ease-in-out all;
+
+    &.showNav{
+      right: 0;
+    }
+
+    .close {
+      margin-bottom: 1rem;
+      align-self: flex-end;
+      cursor: pointer;
+    }
+
+    .navLinks {
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      li {
+        padding: 1rem 0;
+
+        .navLink {
+          font-size: 1.2rem;
+          font-family: $barlow;
+          text-transform: uppercase;
+          color: #eee;
+
+          span{
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
