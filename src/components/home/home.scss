@@ -40,8 +40,9 @@
       }
 
       p {
+        min-height: 0vw;
         width: 90%;
-        font-size: 1.1rem;
+        font-size: clamp(1.1rem, 3vw, 1.4rem);
         line-height: 1.7;
         font-family: $barlow;
         font-weight: 100;
@@ -59,7 +60,9 @@
       button {
         position: relative;
         height: 45vw;
+        max-height: 300px;
         width: 45vw;
+        max-width: 300px;
         border-radius: 50%;
         border: none;
         background: rgba(238, 238, 238, 0.173);
@@ -82,6 +85,7 @@
           position: absolute;
           height: 100%;
           width: 100%;
+          padding: 1rem;
           top: 0;
           left: 0;
           border-radius: 50%;
