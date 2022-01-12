@@ -22,22 +22,22 @@ const Header = () => {
         <CloseMenu className="close" onClick={handleToggle} />
         <ul className="navLinks">
           <li>
-            <Link to="/" className="navLink">
+            <Link to="/" className="navLink" onClick={handleToggle}>
               <span>00</span> Home
             </Link>
           </li>
           <li>
-            <Link to="/crew" className="navLink">
-              <span>01</span> Crew
+            <Link to="/destination" className="navLink" onClick={handleToggle}>
+              <span>01</span> Destination
             </Link>
           </li>
           <li>
-            <Link to="/destination" className="navLink">
-              <span>02</span> Destination
+            <Link to="/crew" className="navLink" onClick={handleToggle}>
+              <span>02</span> Crew
             </Link>
           </li>
           <li>
-            <Link to="/technology" className="navLink">
+            <Link to="/technology" className="navLink" onClick={handleToggle}>
               <span>03</span> Technology
             </Link>
           </li>

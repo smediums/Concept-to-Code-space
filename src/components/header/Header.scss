@@ -7,6 +7,7 @@
   width: 100vw;
   padding: 0.5rem 1rem;
   position: fixed;
+  z-index: 5;
 
   .logo {
     justify-self: start;
@@ -23,17 +24,23 @@
     flex-direction: column;
     position: absolute;
     top: 0;
-    right: -50%;
+    left: 0;
     padding: 1.5rem 1rem;
-    border-radius: 14px 0 0 14px;
-    background: rgba(221, 221, 221, 0.714);
-    backdrop-filter: blur(4px);
+    background: linear-gradient(rgba(237, 237, 237, 0.6), rgba(0, 0, 0, 0.5)),
+      url("../home/assets/background-home-mobile.jpg") no-repeat center/cover;
     height: 100vh;
-    width: 50vw;
-    transition: .2s ease-in-out all;
+    width: 100vw;
+    transition: 0.2s ease-in-out all;
+    opacity: 0;
+    pointer-events: none;
 
-    &.showNav{
-      right: 0;
+    &.showNav {
+      opacity: 1;
+      pointer-events: initial;
+
+      li {
+        // animation: hover 3s infinite;
+      }
     }
 
     .close {
@@ -43,22 +50,53 @@
     }
 
     .navLinks {
-      height: 60%;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+      align-items: center;
 
       li {
-        padding: 1rem 0;
+        position: relative;
+        width: 65%;
+        height: 2.7rem;
+        border-radius: 7px;
+        background: rgba(238, 238, 238, 0.173);
+        backdrop-filter: blur(4px);
+        box-shadow: 0 7px 9px rgba(16, 16, 16, 0.714);
+        align-self: flex-end;
+        transition: 0.5s ease-in-out;
+
+        &::after {
+          content: "";
+          height: 5px;
+          width: 30%;
+          position: absolute;
+          top: 0;
+          left: -50%;
+          background:rgba(0, 0, 0, 0.5);
+        }
+
+        &:hover {
+        }
 
         .navLink {
-          font-size: 1.2rem;
-          font-family: $barlow;
+          @include flexCont(row, default, center);
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          font-size: 1.4rem;
+          font-family: $barlowCondensed;
+          font-weight: 300;
           text-transform: uppercase;
           color: #eee;
+          letter-spacing: 2px;
 
-          span{
+          span {
             font-weight: 500;
+            padding: 0 0.7rem;
+            letter-spacing: normal;
+            color: rgba(0, 0, 0, 0.5);
           }
         }
       }

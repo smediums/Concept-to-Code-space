@@ -1,3 +1,29 @@
 // variables
 $forum: "Forum", sans-serif;
-$barlow: "Barlow Condensed", sans-serif;
+$barlowCondensed: "Barlow Condensed", sans-serif;
+$barlow: "Barlow", sans-serif;
+
+// Mixins
+@mixin flexCont($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin gridCont($columns, $rows) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+}
+
+// Animations
+@keyframes hover {
+  0%,
+  100% {
+    box-shadow: 0 6px 9px rgba(16, 16, 16, 0.79);
+  }
+  50% {
+    box-shadow: 0 10px 9px rgba(16, 16, 16, 0.79);
+  }
+}

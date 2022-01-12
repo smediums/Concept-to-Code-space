@@ -1,0 +1,94 @@
+@import "../Tools.scss";
+
+.home {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: url("./assets/background-home-mobile.jpg") no-repeat center/cover;
+
+  .homeContent {
+    @include gridCont(default, repeat(2, 1fr));
+    position: absolute;
+    bottom: 0;
+    height: calc(100vh - 105px);
+
+    .greeting {
+      @include flexCont(column, center, center);
+      text-align: center;
+      color: #c9cbe2d2;
+
+      h4,
+      h2 {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      h4 {
+        min-height: 0vw;
+        font-family: $barlowCondensed;
+        font-weight: 300;
+        font-size: clamp(1.2rem, 8vw, 1.5rem);
+      }
+
+      h2 {
+        min-height: 0vw;
+        font-size: clamp(2.5rem, 25vw, 7.8rem);
+        font-family: $forum;
+        color: rgba(238, 238, 238, 0.838);
+        letter-spacing: 4px;
+      }
+
+      p {
+        width: 90%;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        font-family: $barlow;
+        font-weight: 100;
+        letter-spacing: 1px;
+      }
+    }
+
+    .exploreBtn {
+      @include flexCont(default, center, center);
+      height: 100%;
+      font-size: 1.8rem;
+
+      padding: 1rem;
+
+      button {
+        position: relative;
+        height: 45vw;
+        width: 45vw;
+        border-radius: 50%;
+        border: none;
+        background: rgba(238, 238, 238, 0.173);
+        backdrop-filter: blur(5px);
+        font-size: 2.1rem;
+        font-family: $forum;
+        letter-spacing: 2px;
+        transition: 0.1s ease-in-out;
+
+        &:hover {
+          background: rgba(242, 242, 242, 0.502);
+          
+          a{
+            color: #222;
+          }
+        }
+
+        a {
+          @include flexCont(default, center, center);
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          border-radius: 50%;
+          color: #eee;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
