@@ -15,7 +15,7 @@
     .greeting {
       @include flexCont(column, center, center);
       text-align: center;
-      color: #c9cbe2d2;
+      color: $blueishWhite;
 
       h4,
       h2 {
@@ -74,8 +74,8 @@
 
         &:hover {
           background: rgba(242, 242, 242, 0.502);
-          
-          a{
+
+          a {
             color: #222;
           }
         }
