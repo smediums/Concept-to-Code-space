@@ -1,7 +1,19 @@
-import React from "react";
+import Slider from '../slider/Slider';
+import './technology.scss';
 
-const Technology = () => {
-  return <div></div>;
+const Technology = ({data}) => {
+console.log(data)
+
+  return (
+    <section className="technology">
+      <div className="content">
+        <h2 className="navigation">
+          <span>03</span> Space launch 101
+        </h2>
+        <Slider data={data} descClass="desc" />
+      </div>
+    </section>
+  );
 };
 
 export default Technology;

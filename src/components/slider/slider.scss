@@ -1,0 +1,64 @@
+@import "../Tools.scss";
+
+.slider {
+  @include gridCont(default, 1fr 1fr);
+  height: 100%;
+
+  .visualContent {
+    @include flexCont(column, center, center);
+    justify-self: center;
+
+    img {
+      height: 300px;
+      margin-top: 1rem;
+    }
+
+    ul {
+      @include flexCont(row, center,center);
+      margin: 1.3rem 0;
+
+      .indicate {
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        background: rgba(238, 238, 238, 0.342);
+        margin: 0 1rem;
+        cursor: pointer;
+
+        &.clicked,
+        &:hover {
+          background: rgba(238, 238, 238, 0.803);
+        }
+      }
+    }
+  }
+
+  .details {
+    text-align: center;
+    padding-bottom: 2rem;
+
+    .role,
+    .name {
+      font-family: $forum;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+    .role {
+      color: #aaa;
+      margin-bottom: 0.5rem;
+    }
+
+    .name {
+      color: #eee;
+      margin-bottom: 1.2rem;
+    }
+
+    .bio,.desc {
+      color: $blueishWhite;
+      font-family: $barlow;
+      font-weight: 200;
+      letter-spacing: 1px;
+      line-height: 1.6;
+    }
+  }
+}

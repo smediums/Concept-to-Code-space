@@ -13,7 +13,7 @@ const Destination = ({ data }) => {
         {/* Img and text container */}
         <div className="theInfo">
           {/* Destination Img */}
-          <img src={data[dataIndex].images.png} alt={data[dataIndex].name} />
+          <img src={data[dataIndex].image} alt={data[dataIndex].name} />
           <div className="overview">
             {/* Destination choices */}
             <ul className="places">

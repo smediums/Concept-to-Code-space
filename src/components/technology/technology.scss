@@ -1,0 +1,25 @@
+@import "../Tools.scss";
+
+.technology {
+  background: url("../../../public/assets/technology/background-technology-tablet.jpg")
+    no-repeat center/cover;
+  color: #eee;
+  padding-bottom: 2rem;
+
+  .slider {
+      
+    #indicate {
+        @include flexCont(column, center, center);
+        position: relative;
+      height: 60px;
+      width: 60px;
+      font-size: 2rem;
+      border: 1px solid #eee;
+      background: transparent;
+    }
+
+    p {
+
+    }
+  }
+}
