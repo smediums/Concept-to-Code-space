@@ -4,7 +4,8 @@
   position: relative;
   background: url("../../../public/assets/destination/background-destination-tablet.jpg")
     no-repeat center/cover;
-    overflow-y: scroll;
+  overflow-y: scroll;
+  color: $blueishWhite;
 
   .content {
     position: absolute;
@@ -16,30 +17,104 @@
     h2 {
       font-family: $barlowCondensed;
       text-transform: uppercase;
-      color: #eee;
+      color: rgba(238, 238, 238, 0.721);
       font-weight: 200;
-      
-      span{
+
+      span {
         font-weight: 400;
       }
     }
 
-
     .theInfo {
       @include gridCont(default, repeat(2, 1fr));
-      gap: 1.8rem;
       height: 100%;
-      color: #eee;
 
       img {
         padding-top: 2rem;
         justify-self: center;
-        width: 80%;
+        width: 75%;
       }
 
-      .overview{
-        .places{
-          @include 
+      .overview {
+        @include flexCont(column, center, center);
+        height: 100%;
+        align-self: start;
+
+        .places {
+          @include flexCont(row, center, center);
+          padding: 1rem 0;
+
+          li {
+            position: relative;
+            margin: 0.3rem;
+            font-family: $barlowCondensed;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+
+            &::after{
+              content: '';
+              width: 20px;
+              height: 0;
+              background: #eee;
+              position: absolute;
+              bottom: -8px;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+
+            &.clicked, &:hover{
+              color: #eee;
+              &::after{
+                height: 2px;
+              }
+            }
+          }
+        }
+
+        .details{
+          @include flexCont(column, center, center);
+
+          .placeName{
+            font-size: 6rem;
+            font-family: $forum;
+            text-transform: uppercase;
+            margin-bottom: .6rem;
+            color: #eee;
+          }
+
+          .description{
+            font-family: $barlow;
+            text-align: center;
+            line-height: 1.5;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+          }
+
+          .tripSummary{
+            @include gridCont(auto,1fr 1fr);
+            gap: 1.2rem;
+            padding: 1rem 0;
+
+            p,h4{
+              text-transform: uppercase;
+              text-align: center;
+              letter-spacing: 2px;
+            }
+
+            p{
+              font-family: $barlowCondensed;
+              font-size: 1.3rem;
+            }
+
+            h4{
+              font-family: $forum;
+              font-size: 3rem;
+              color: #eee;
+            }
+          }
         }
       }
     }

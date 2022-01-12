@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const Destination = ({ data }) => {
   const [dataIndex, setDataIndex] = useState(0);
+  const [clicked, setClicked] = useState(false);
 
   return (
     <section className="destination">
@@ -20,6 +21,7 @@ const Destination = ({ data }) => {
               {data.map((place) => (
                 <li
                   key={place.name}
+                  className={data[dataIndex] === place ? "clicked" : ""}
                   onClick={() => setDataIndex(data.indexOf(place))}
                 >
                   {place.name}
@@ -31,7 +33,7 @@ const Destination = ({ data }) => {
               {/* Name */}
               <h1 className="placeName">{data[dataIndex].name}</h1>
               {/* Description */}
-              <p>{data[dataIndex].description}</p>
+              <p className="description">{data[dataIndex].description}</p>
               <div className="tripSummary">
                 {/* Distance */}
                 <div className="distance">
