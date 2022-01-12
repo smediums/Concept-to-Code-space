@@ -1,6 +1,13 @@
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
-import { Header, Home, Crew, Destination, Technology } from "../../components";
+import {
+  Header,
+  Home,
+  Crew,
+  Destination,
+  Technology,
+  Pages,
+} from "../../components";
 import "./App.scss";
 import data from "../../data.json";
 

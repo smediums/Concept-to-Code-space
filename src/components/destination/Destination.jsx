@@ -3,12 +3,11 @@ import { useState } from "react";
 
 const Destination = ({ data }) => {
   const [dataIndex, setDataIndex] = useState(0);
-  const [clicked, setClicked] = useState(false);
 
   return (
     <section className="destination">
       <div className="content">
-        <h2>
+        <h2 className="navigation">
           <span>01</span> Pick your destination
         </h2>
         {/* Img and text container */}

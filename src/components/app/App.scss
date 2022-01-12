@@ -16,8 +16,28 @@ body {
   height: 100%;
 
   section {
+    position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow-y: scroll;
+    
+    .content {
+      position: absolute;
+      bottom: 0;
+      height: calc(100% - 65px);
+      width: 100%;
+      padding: 1rem;
+
+      h2 {
+        font-family: $barlowCondensed;
+        text-transform: uppercase;
+        color: rgba(238, 238, 238, 0.721);
+        font-weight: 200;
+
+        span {
+          font-weight: 400;
+        }
+      }
+    }
   }
 }
