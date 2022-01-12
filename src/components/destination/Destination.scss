@@ -1,0 +1,29 @@
+@import "../Tools.scss";
+
+.destination {
+  position: relative;
+  background: url("../../../public/assets/destination/background-destination-tablet.jpg")
+    no-repeat center/cover;
+
+  .content {
+    position: absolute;
+    bottom: 0;
+    height: calc(100% - 75px);
+    width: 100%;
+    padding: 1rem;
+    overflow-y: scroll;
+
+    h2 {
+    }
+
+    .theInfo {
+      @include flexCont(column, default, center);
+      height: 100%;
+      color: #eee;
+
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
