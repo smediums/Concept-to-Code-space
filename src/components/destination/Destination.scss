@@ -4,25 +4,43 @@
   position: relative;
   background: url("../../../public/assets/destination/background-destination-tablet.jpg")
     no-repeat center/cover;
+    overflow-y: scroll;
 
   .content {
     position: absolute;
     bottom: 0;
-    height: calc(100% - 75px);
+    height: calc(100% - 65px);
     width: 100%;
     padding: 1rem;
-    overflow-y: scroll;
 
     h2 {
+      font-family: $barlowCondensed;
+      text-transform: uppercase;
+      color: #eee;
+      font-weight: 200;
+      
+      span{
+        font-weight: 400;
+      }
     }
 
+
     .theInfo {
-      @include flexCont(column, default, center);
+      @include gridCont(default, repeat(2, 1fr));
+      gap: 1.8rem;
       height: 100%;
       color: #eee;
 
       img {
+        padding-top: 2rem;
+        justify-self: center;
         width: 80%;
+      }
+
+      .overview{
+        .places{
+          @include 
+        }
       }
     }
   }
