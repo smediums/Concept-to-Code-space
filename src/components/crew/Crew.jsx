@@ -1,4 +1,4 @@
-
+import NextBtn from "../nextBtn/NextBtn";
 import Slider from "../slider/Slider";
 import "./crew.scss";
 
@@ -13,6 +13,7 @@ const Crew = ({ data }) => {
         </h2>
         {/* Img and slide indicators */}
           <Slider data={data} descClass={'bio'}/>
+          <NextBtn link={'/technology'}/>
       </div>
     </section>
   );

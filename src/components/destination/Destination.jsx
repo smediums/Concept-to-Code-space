@@ -1,5 +1,6 @@
 import "./Destination.scss";
 import { useState } from "react";
+import NextBtn from "../nextBtn/NextBtn";
 
 const Destination = ({ data }) => {
   const [dataIndex, setDataIndex] = useState(0);
@@ -48,6 +49,7 @@ const Destination = ({ data }) => {
             </div>
           </div>
         </div>
+        <NextBtn link={"/crew"} />
       </div>
     </section>
   );

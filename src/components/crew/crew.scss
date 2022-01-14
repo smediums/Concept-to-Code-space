@@ -4,5 +4,7 @@
   background: url("../../../public/assets/crew/background-crew-tablet.jpg")
     no-repeat center/cover;
 
-  
+  @include responsive(tablet){
+    background: url("../../../public/assets/crew/background-crew-desktop.jpg") no-repeat center/cover;
+  }
 }

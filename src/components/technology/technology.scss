@@ -7,10 +7,9 @@
   padding-bottom: 2rem;
 
   .slider {
-      
     #indicate {
-        @include flexCont(column, center, center);
-        position: relative;
+      @include flexCont(column, center, center);
+      position: relative;
       height: 60px;
       width: 60px;
       font-size: 2rem;
@@ -19,7 +18,9 @@
     }
 
     p {
-
     }
   }
+
+  background: url("../../../public/assets/technology/background-technology-desktop.jpg")
+    no-repeat center/cover;
 }

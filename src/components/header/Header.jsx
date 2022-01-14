@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <Logo />
+        <Logo className="theLogo" />
       </div>
       <OpenToggle className="toggler" onClick={handleToggle} />
       <nav className={navShow === true ? "showNav" : ""}>

@@ -28,3 +28,17 @@ $blueishWhite: #c9cbe2d2;
     box-shadow: 0 10px 9px rgba(16, 16, 16, 0.79);
   }
 }
+
+// Media Queries
+@mixin responsive($breakPoint) {
+  @if ($breakPoint == tablet) {
+    @media screen and (min-width: 504px) {
+      @content;
+    }
+  }
+  @if ($breakPoint == lgScreen) {
+    @media screen and (min-width: 960px) {
+      @content;
+    }
+  }
+}

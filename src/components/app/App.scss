@@ -16,20 +16,25 @@ body {
   height: 100%;
 
   section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 100vw;
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    
+
     .content {
       position: absolute;
       bottom: 0;
-      height: calc(100% - 65px);
+      height: calc(100% - 75px);
       width: 100%;
-      padding: 1rem;
+      padding: 0 1rem;
+      max-width: 980px;
 
       h2 {
+        padding-left: 0.5rem;
         font-family: $barlowCondensed;
         text-transform: uppercase;
         color: rgba(238, 238, 238, 0.721);
@@ -38,6 +43,22 @@ body {
         span {
           font-weight: 400;
         }
+      }
+
+      .next {
+        position: absolute;
+        transform: translateY(calc(-100% + 1rem));
+        top: 0;
+        right: 1rem;
+        padding: 0.1rem 1.5rem;
+        margin: 1rem;
+        color: #eee;
+        cursor: pointer;
+        font-family: $barlowCondensed;
+        text-transform: uppercase;
+        font-weight: 200;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
       }
     }
   }

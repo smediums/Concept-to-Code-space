@@ -11,6 +11,7 @@
     position: absolute;
     bottom: 0;
     height: calc(100vh - 105px);
+    max-width: 980px;
 
     .greeting {
       @include flexCont(column, center, center);
@@ -94,5 +95,8 @@
         }
       }
     }
+  }
+  @include responsive(tablet) {
+    background: url("./assets/background-home-desktop.jpg") no-repeat center/cover;
   }
 }
